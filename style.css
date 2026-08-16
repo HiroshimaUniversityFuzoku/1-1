@@ -1,0 +1,131 @@
+html {
+    scroll-behavior: smooth;
+}
+:root{
+    --mainColor:#00dcff
+}
+
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: transparent ;
+    border: solid 2px var(--mainColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid  var(--mainColor);
+    border-right: 3px solid  var(--mainColor);
+    transform: translateY(20%) rotate(-45deg);
+}
+
+h1 , p , h6{
+  font-family: "Kaisei Opti", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo{
+    position: relative;
+}
+
+body{
+    background-color: white;
+}
+
+.logo img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50% , 25%); */
+    max-width: 80vw;
+    animation: fade-out 1s ease-in 1s forwards , logo-in 1s ease-in 0s forwards;
+}
+
+@keyframes logo-in{
+    from{
+        transform: translate(-50% , 0%);
+    }
+    to{
+        transform: translate(-50% , 25%);
+    }
+}
+
+.logo p{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 16px;
+    transform: translate(-50% , 80vh);
+    overflow: hidden;
+    width: 0;
+    text-align: center;
+    white-space: nowrap;
+    animation: OP 1s steps(20) 0s forwards , fade-out 1s ease-in 1s forwards;
+}
+
+@keyframes OP{
+    from{
+        width: 0;
+    }
+    to{
+        width: 90vw;
+    }
+}
+
+@keyframes fade-out{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.mainText{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    animation: fade-in 1s ease-in 2s forwards;
+}
+
+.mainText{
+    text-align: center;
+}
+
+@keyframes fade-in{
+    from{
+        max-height: 0;
+        opacity: 0;
+    }
+    to{
+        max-height: 114514px;
+        opacity: 1;
+    }
+}
+
+.mainText img{
+    max-width: 90vw;
+}
+
+.site-footer{
+    border-top: 1px solid #828282;
+}
+
+.site-footer h6{
+    font-size: 16px;
+}
+
+.titleText{
+    font-size: 24px;
+}
