@@ -18,6 +18,7 @@ html {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    backdrop-filter: blur(50px);
 }
 
 .pagetop__arrow {
@@ -138,8 +139,42 @@ body{
     height: auto;
     margin: 0;
     padding: 20px 0;
+    z-index: 99;
 }
 
 .topText{
     margin-top: 100px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    gap: 20px;
+    text-align: center;
+    padding: 30px;
+    width: 70%;
+    border-radius: 32px;
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
+    z-index: 9999;
+}
+
+.menu{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu img{
+    width: 50%;
+    height: auto;
 }
